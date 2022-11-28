@@ -1,0 +1,178 @@
+normalize css cdnjs--
+tirar o cache, ajeitar a página html
+--corrige alguns bugs de estilização de página
+--corrigem margem, padding, etc...
+--CSS ficar igual em todos os navegadores
+
+//NPM INSTALL HTTP-SERVER
+// http-server ./
+//Dá pra copiar o IP para o celular e testar o servidor também
+
+1 rem serve para ser flexivel o tamanho, em relação à fonte
+pixel é pixelado, não é relativo
+
+CSS
+//height - alterou o tamanho da imagem
+display flex -- ou um na frente do outro ou em baixo
+flex direction - column (vertical) ou row (horizontal)
+
+Responsividade
+@media screen and (min-width: 576px) {
+    .pokemons{
+      grid-template-columns: 1fr 1fr 1fr ;
+    }
+  }
+
+definir tamanho de tela para cada dispositivo
+https://getbootstrap.com/docs/5.0/layout/breakpoints/
+
+bootstrap ajuda no CSS
+
+API - servidor fornecendo dados para algum cliente
+pokeAPI serve apenas informações
+
+Protocolo HTTP - protocolo cliente-servidor
+
+Json - texto ou arquivo transferível na web
+arquivo compacto ou simples trocado na web
+solicitação - request HTTP
+Como montar uma requisição?
+
+REQUISIÇÃO HTTP
+
+URL --> ${IP}/${PATH} - caminho de identificação do recurso
+http://127.0.0.1:80:3000 - transformado no servidor dns
+https://pokeapi.co/api/v2/pokemon
+--- requisição http - endereço + caminho de recurso
+
+request method : get | post | put | delete | patch
+APi rest - padronização
+
+
+GET - BUSCAR OQUE?
+
+path params
+ID dinâmico
+https://pokeapi.co/api/v2/pokemon/{id} -- path - transferir dados
+detalhes de algum pokemon - identificação de algum recursos
+
+query string - descrição de busca
+especificar o conteúdo a ser buscado - filtro
+
+https://pokeapi.co/api/v2/pokemon?type=grass&name=i
+especificar a busca na API
+paginação da busca - onde buscar?
+busca através da query string ou do path param
+
+headers - configuração da nossa requisição
+dados que fazem sentido para configurar
+informações úteis
+
+Request headers
+Accept Languages
+    pt-br
+    pt
+    en-us  
+    en
+    gl
+
+Response headers
+Configurações
+
+Body - corpo da requisição
+GET NÃO TEM BODY NA REQUISIÇÃO
+
+POST - salvar um novo pokemon
+API JSON - CONTENT TYPE
+
+Nome do pokemon json (header)
+Body{
+    "name": "Test"
+}
+
+é a aplicação ou o corpo da requisição
+
+
+REQUISIÇÃO
+URL
+REQUEST method - GET
+REQUEST headers - content-type: json apllication
+REQUEST BODY {"1" : "teste"}
+
+STATUS code: 200(OK) - resposta
+Response headers
+responde body
+
+Assim que funnciona a requisição HTTP
+
+GET - RESPONSE
+
+entender isso para começar a fazer requisição pelo javascript
+
+COMO FAZER REQUISIÇÃO HTTP JAVASCRIPT?
+
+FETCH API - precisa para fazer a requisição
+para fazer a requisição do PokeAPI
+
+
+/* se a resposta do fetch for sucedida, irá ser
+executada a função do 'then()'
+existem tipos de processamento que a resposta
+não vem de imediato, precisa de um processo demorado ou
+não*/
+
+/* o fetch retorna uma promise, resposta assincrona
+seria a promessa de um resultado
+
+semelhante ao tratamento de erro
+
+try{}
+catch{}
+finally{}
+
+response.json()-- converte para texto para javascript
+json para js texto
+
+pode-se colocar varios thens seguidos se referenciando
+ao anterior para não ter desorganização e callbacks
+
+arrow function -- sintaxe reduzida para definição função
+=>
+
+sintaxe
+
+fetch(url)
+    .then()
+    .then(() => {})
+    .catch((error) =>})
+    .finally(() => {})
+
+
+    debugger- debugar codigo de js em browser
+
+       .then((response) => response.json())
+
+       já dita que um parámetro irá retornar para o outro then
+       possui o return do resultado, só se for código de uma linhna
+*/
+
+/* Aqui, o código começa a editar o corpo do HTML*/
+
+      /*como colocar dentro do html?
+        
+        window - janela
+        document - documento html na página
+
+        Para transformar uma lista de determinado tipo de elemento
+        em outra lista de outro tipo de elemento, usa função map
+
+        função map:
+
+        novalista = lista.map((numero) => {
+        return somar(numero)
+        })
+
+        pega um parâmetro e retorna como cada elemento da lista, transforma cada elemento em outro da mesma lista, mapeia
+
+        */
+
